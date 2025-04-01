@@ -1,0 +1,82 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Ajouter un ingrédient</h2>
+  
+  <form #ingredientForm="ngForm" (ngSubmit)="onSubmit()" class="row g-3">
+    <!-- Nom -->
+    <div class="col-md-6">
+      <label class="form-label">Nom :</label>
+      <input type="text" name="name" [(ngModel)]="ingredient.nom" class="form-control" required>
+    </div>
+
+    <!-- Iode -->
+    <div class="col-md-6">
+      <label class="form-label">Iode :</label>
+      <input type="number" name="iode" [(ngModel)]="ingredient.iode" class="form-control" required>
+    </div>
+
+    <!-- INS -->
+    <div class="col-md-6">
+      <label class="form-label">INS :</label>
+      <input type="number" name="ins" [(ngModel)]="ingredient.ins" class="form-control" required>
+    </div>
+
+    <!-- Sapo -->
+    <div class="col-md-6">
+      <label class="form-label">Sapo :</label>
+      <input type="number" name="sapo" [(ngModel)]="ingredient.sapo" class="form-control" required>
+    </div>
+
+    <!-- Volume Mousse -->
+    <div class="col-md-6">
+      <label class="form-label">Volume Mousse :</label>
+      <input type="number" name="volMousse" [(ngModel)]="ingredient.volMousse" class="form-control" required>
+    </div>
+
+    <!-- Tenue Mousse -->
+    <div class="col-md-6">
+      <label class="form-label">Tenue Mousse :</label>
+      <input type="number" name="tenueMousse" [(ngModel)]="ingredient.tenueMousse" class="form-control" required>
+    </div>
+
+    <!-- Douceur -->
+    <div class="col-md-6">
+      <label class="form-label">Douceur :</label>
+      <input type="number" name="douceur" [(ngModel)]="ingredient.douceur" class="form-control" required>
+    </div>
+
+    <!-- Lavant -->
+    <div class="col-md-6">
+      <label class="form-label">Lavant :</label>
+      <input type="number" name="lavant" [(ngModel)]="ingredient.lavant" class="form-control" required>
+    </div>
+
+    <!-- Dureté -->
+    <div class="col-md-6">
+      <label class="form-label">Dureté :</label>
+      <input type="number" name="durete" [(ngModel)]="ingredient.durete" class="form-control" required>
+    </div>
+
+    <!-- Solubilité -->
+    <div class="col-md-6">
+      <label class="form-label">Solubilité :</label>
+      <input type="number" name="solubilite" [(ngModel)]="ingredient.solubilite" class="form-control" required>
+    </div>
+
+    <!-- Séchage -->
+    <div class="col-md-6">
+      <label class="form-label">Séchage :</label>
+      <input type="number" name="sechage" [(ngModel)]="ingredient.sechage" class="form-control" required>
+    </div>
+
+    <!-- Est un corps gras -->
+    <div class="col-md-12 form-check">
+      <input type="checkbox" name="estCorpsGras" [(ngModel)]="ingredient.estCorpsGras" class="form-check-input">
+      <label class="form-check-label">Est un corps gras</label>
+    </div>
+
+    <!-- Bouton d'envoi -->
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-primary px-4" [disabled]="ingredientForm.invalid">Envoyer</button>
+    </div>
+  </form>
+</div>

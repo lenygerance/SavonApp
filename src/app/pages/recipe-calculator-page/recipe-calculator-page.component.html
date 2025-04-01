@@ -1,0 +1,31 @@
+<button type="button" class="btn btn-success" (click)="openIngredientModal()">
+  + Ingrédient
+  </button>
+  <table class="table">
+  <thead>
+  <tr>
+  <th>Nom Ingrédient</th>
+  <th>Quantité Gramme</th>
+  <th>Pourcentage</th>
+  <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let ligne of selectedIngredients; let i = index">
+  <td>{{ ligne.ingredient?.nom }}</td>
+  <td>
+  <input type="number" class="form-control"
+  name="quantite{{i}}" [(ngModel)]="ligne.quantite" min="0">
+  </td>
+  <td>
+  <input type="number" class="form-control"
+  name="pourcentage{{i}}" [(ngModel)]="ligne.pourcentage" min="0"
+  max="100">
+  </td>
+  <td>
+  <button type="button" class="btn btn-danger btn-sm"
+  (click)="supprimerIngredient(i)">X</button>
+  </td>
+  </tr>
+  </tbody>
+  </table>

@@ -1,0 +1,16 @@
+.bg-purple {
+    background-color: #800080 !important; /* Fond mauve */
+  }
+  
+  .text-purple {
+    color: #a16ba1 !important; /* Texte mauve */
+  }
+  
+  .footer p {
+    font-size: 14px;
+  }
+  
+  .footer-bottom {
+    font-size: 14px;
+  }
+  
